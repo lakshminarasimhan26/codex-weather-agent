@@ -1,0 +1,23 @@
+[project]
+name = "weather-agent"
+version = "0.1.0"
+description = "AI weather agent that uses OpenAI and Open-Meteo"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "openai>=1.58.1",
+  "httpx>=0.27.2",
+]
+
+[project.scripts]
+weather-agent = "weather_agent.cli:main"
+
+[build-system]
+requires = ["hatchling>=1.25.0"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+dev-dependencies = [
+  "pytest>=8.3.4",
+  "ruff>=0.8.4",
+]
